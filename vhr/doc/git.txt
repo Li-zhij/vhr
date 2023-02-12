@@ -1,2 +1,7 @@
 1.OpenSSL SSL_read: Connection was reset, errno 10054 解决方法：
-    git config --global http.sslVerify "false"
+    方法1：执行命令 git config --global http.sslVerify "false"
+    方法2：git 配置文件（.git/config）添加以下内容：
+        [http]
+        	sslverify = false
+        [https]
+        	sslverify = false
